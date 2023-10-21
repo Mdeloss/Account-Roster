@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Code Tester.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+  student.cpp
+  roster.cpp
+  Generating Code...
+  Final Draft.vcxproj -> C:\Users\delos\Documents\Scripting and Programming Applications\C867 - Performance Assessment Final Draft\Debug\Final Project.exe
