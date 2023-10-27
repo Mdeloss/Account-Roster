@@ -19,9 +19,9 @@ int main()
     };
 
     // Project title and header
-    cout << "Course: C867 Scripting and Programming - Applications" << endl;
+    cout << "Course: Removed for public view" << endl;
     cout << "Programming Language: C++" << endl;
-    cout << "Student ID: 001523416" << endl;
+    cout << "Student ID: 0000000" << endl;
     cout << "Name: Mariano De Los Santos" << endl;
     cout << endl;
 

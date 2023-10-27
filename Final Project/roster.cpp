@@ -206,6 +206,8 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram)
 		classRosterArray[i]->print();
 	}
 }
+
+// Security Degree
 void Roster::parse4S(string row)
 {
 	Roster classRoster;
@@ -239,6 +241,8 @@ void Roster::parse4S(string row)
 	classRoster.printByDegreeProgram(DegreeProgram::SECURITY);
 
 }
+
+// Software Degree
 void Roster::parse4SO(string row)
 {
 	Roster classRoster;
@@ -272,6 +276,8 @@ void Roster::parse4SO(string row)
 	classRoster.printByDegreeProgram(DegreeProgram::SOFTWARE);
 
 }
+
+// Network Degree
 void Roster::parse4N(string row)
 {
 	Roster classRoster;
@@ -329,38 +335,7 @@ void Roster::remove(string studentID)
 		cout << "Student: " << studentID << " not found. \n";
 
 }
-void Roster::parse5(string row)
-{
-	Roster classRoster;
-	string studentString = row;
 
-	// Working parse with vector and add function
-	vector<string> st;
-	stringstream studentStream(studentString);
-	while (studentStream.good()) // length of characters
-	{
-		string substr;
-		getline(studentStream, substr, ',');
-		st.push_back(substr); // back of vector
-	}
-
-	DegreeProgram degreeProgram = DegreeProgram::NETWORK;
-	if (st.at(8).back() == 'Y')
-		degreeProgram = DegreeProgram::SECURITY;
-	if (st.at(8).back() == 'E')
-		degreeProgram = DegreeProgram::SOFTWARE;
-	int tempAge = 0;
-	tempAge = stoi(st.at(4));
-	int* tempArray = new int[3];
-	tempArray[0] = stoi(st.at(5));
-	tempArray[1] = stoi(st.at(6));
-	tempArray[2] = stoi(st.at(7));
-
-
-	classRoster.add(st.at(0), st.at(1), st.at(2), st.at(3), stoi(st.at(4)), stoi(st.at(5)), stoi(st.at(6)), stoi(st.at(7)), degreeProgram);
-
-		classRoster.remove("A3");
-}
 
 
 Roster::~Roster()
